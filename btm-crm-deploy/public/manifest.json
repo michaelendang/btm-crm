@@ -1,0 +1,14 @@
+{
+  "name": "BTM Energi Nusantara CRM",
+  "short_name": "BTM CRM",
+  "description": "Sistem CRM Penjualan PT. BTM Energi Nusantara",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070A12",
+  "theme_color": "#F59E0B",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
