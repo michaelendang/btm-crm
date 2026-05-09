@@ -21,7 +21,8 @@ const WIN_R    = ["Harga kompetitif","Hubungan baik dengan klien","Demo produk s
 const LOSS_R   = ["Kalah harga dari kompetitor","Anggaran klien dipotong","Proyek ditunda","Tidak ada respons","Kompetitor menang tender"];
 const RC       = ["#F59E0B","#60A5FA","#A78BFA","#34D399"];
 const DEF_TGT  = {"Rizky Pratama":2000000000,"Siti Nurhaliza":1500000000,"Doni Kusuma":1200000000,"Andi Firmansyah":1000000000};
-const LS_URL   = "btm_crm_sheets_url";
+const LS_URL        = "btm_crm_sheets_url";
+const DEFAULT_URL   = "https://script.google.com/macros/s/AKfycbwqxUagiWnRi8vhfljB1-Vrp01kayQzNeUOenUs16YaIhlVBkc-plQoBzs9ZE17KeTD6g/exec";
 
 // ═══ HELPERS ═══
 const fmtIDR   = v => { const n=Number(v); if(!n)return"IDR 0"; if(n>=1e9)return`IDR ${(n/1e9).toFixed(2)}B`; if(n>=1e6)return`IDR ${Math.round(n/1e6)}M`; return`IDR ${n.toLocaleString("id-ID")}`; };
@@ -489,7 +490,7 @@ function TeamView({ deals, targets, setTargets }) {
 
 // ═══ MAIN APP ═══
 export default function App() {
-  const [sheetsUrl,setSheetsUrl] = useState(() => localStorage.getItem(LS_URL)||"");
+  const [sheetsUrl,setSheetsUrl] = useState(() => localStorage.getItem(LS_URL)||DEFAULT_URL);
   const [deals,setDeals]         = useState([]);
   const [targets,setTargets]     = useState(DEF_TGT);
   const [selected,setSelected]   = useState(null);
